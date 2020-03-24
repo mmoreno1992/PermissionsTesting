@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mButton = findViewById(R.id.boton_camara);
         mButton.setOnClickListener(v -> {
-            solicitarAccesoCamara();
+            solicitarAccesoContactos();
         });
     }
 
-    private void solicitarAccesoCamara() {
+    private void solicitarAccesoContactos() {
         //No tiene el permiso dado
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_CONTACTS)) {
